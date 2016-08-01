@@ -24,6 +24,8 @@
             }]
         },
         "win": {
+            "remoteReleases":"https://github.com/meadowcottage/TwitchAlerts",
+            "loadingGif":"build/install-spinner.gif",
             "msi": true
         }
     },
