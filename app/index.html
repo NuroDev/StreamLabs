@@ -35,7 +35,10 @@
 
         // DOM ready executing scripts after the webview has loaded
         webview.addEventListener('dom-ready', function() {
-            this.insertCSS('::-webkit-scrollbar { display: none!important; } body > div { margin-top: 42px!important; border-radius: 4px!important; } body > div > div:nth-child(1) { border-top-left-radius: 4px!important; } body > div > div:nth-child(2) > div:nth-child(1) { border-top-right-radius: 4px; }');
+            this.insertCSS('::-webkit-scrollbar { display: none!important; }');
+            if (process.platform == 'darwin') {
+                this.insertCSS('body > div { top: -42px!important; margin-top: 42px!important; }');
+            }
         });
 
         // Webview links that try to open in new window will open in default browser
