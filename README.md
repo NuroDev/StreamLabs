@@ -15,6 +15,12 @@
 
 ## Install
 
+<img src="https://raw.githubusercontent.com/Meadowcottage/TwitchAlerts/master/build/Screenshot-1.png"/>
+
+<img src="https://raw.githubusercontent.com/Meadowcottage/TwitchAlerts/master/build/Screenshot-2.png"/>
+
+## Install
+
 [Download the lastest version](https://github.com/Meadowcottage/TwitchAlerts/releases).
 
 ## Development
