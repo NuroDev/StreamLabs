@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+        }
+        #webview {
+            height: 100vh;
+            position: fixed;
+            width: 100%;
+        }
+        ::-webkit-scrollbar {
+            display: none!important;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="macOS-style" style="-webkit-app-region: drag;"></div>
+    <webview id='webview' src='https://www.twitchalerts.com/dashboard/'></webview>
+    <script>
+        //Constant variable made from 'webview' ID
+        const webview = document.getElementById('webview');
+
+        // DOM ready executing scripts after the webview has loaded
+        webview.addEventListener('dom-ready', function() {
+            this.insertCSS('::-webkit-scrollbar { display: none!important; }');
+        });
+
+        // Webview links that try to open in new window will open in default browser
+        webview.addEventListener('new-window', function(event) {
+            require('electron').shell.openExternal(event.url);
+        });
+    </script>
+</body>
+
+</html>
