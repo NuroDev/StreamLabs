@@ -13,7 +13,7 @@
   <a href="https://github.com/Meadowcottage/TwitchAlerts/releases"><img src="https://img.shields.io/github/downloads/meadowcottage/TwitchAlerts/total.svg?style=flat-square" alt="Downloads"></a>
 </p>
 
-## Install
+## Screenshots
 
 <img src="https://raw.githubusercontent.com/Meadowcottage/TwitchAlerts/master/build/Screenshot-1.png"/>
 
