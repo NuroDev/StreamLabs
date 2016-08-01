@@ -14,6 +14,12 @@
             position: fixed;
             width: 100%;
         }
+        #macOS-style {
+            -webkit-app-region: drag;
+            width: 100%;
+            height: 42px;
+            position: fixed;
+        }
         ::-webkit-scrollbar {
             display: none!important;
         }
@@ -29,7 +35,7 @@
 
         // DOM ready executing scripts after the webview has loaded
         webview.addEventListener('dom-ready', function() {
-            this.insertCSS('::-webkit-scrollbar { display: none!important; }');
+            this.insertCSS('::-webkit-scrollbar { display: none!important; } body > div { margin-top: 42px!important; border-radius: 4px!important; } body > div > div:nth-child(1) { border-top-left-radius: 4px!important; } body > div > div:nth-child(2) > div:nth-child(1) { border-top-right-radius: 4px; }');
         });
 
         // Webview links that try to open in new window will open in default browser
