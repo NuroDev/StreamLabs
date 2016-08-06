@@ -9,6 +9,7 @@
 
 <p align="center">
   <a href="https://travis-ci.org/Meadowcottage/TwitchAlerts"><img src="https://img.shields.io/travis/Meadowcottage/TwitchAlerts/master.svg?style=flat-square" alt="Travis"></a>
+  <a href="https://ci.appveyor.com/project/Meadowcottage/TwitchAlerts"><img src="https://img.shields.io/appveyor/ci/meadowcottage/TwitchAlerts.svg?style=flat-square" alt="Appveyor"></a>
   <a href="https://github.com/Meadowcottage/TwitchAlerts/releases"><img src="https://img.shields.io/github/release/Meadowcottage/TwitchAlerts.svg?style=flat-square" alt="Release"></a>
   <a href="https://github.com/Meadowcottage/TwitchAlerts/releases"><img src="https://img.shields.io/github/downloads/meadowcottage/TwitchAlerts/total.svg?style=flat-square" alt="Downloads"></a>
 </p>
