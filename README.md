@@ -11,6 +11,7 @@
   <a href="https://travis-ci.org/Meadowcottage/TwitchAlerts"><img src="https://img.shields.io/travis/Meadowcottage/TwitchAlerts/master.svg?style=flat-square" alt="Travis"></a>
   <a href="https://ci.appveyor.com/project/Meadowcottage/TwitchAlerts"><img src="https://img.shields.io/appveyor/ci/meadowcottage/TwitchAlerts.svg?style=flat-square" alt="Appveyor"></a>
   <a href="https://github.com/Meadowcottage/TwitchAlerts/releases"><img src="https://img.shields.io/github/release/Meadowcottage/TwitchAlerts.svg?style=flat-square" alt="Release"></a>
+  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=bendixon50%40gmail%2ecom&item_name=Tip%20for%20Meadowcottage&currency_code=GBP"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square" alt="Paypal"></a>
   <a href="https://github.com/Meadowcottage/TwitchAlerts/releases"><img src="https://img.shields.io/github/downloads/meadowcottage/TwitchAlerts/total.svg?style=flat-square" alt="Downloads"></a>
 </p>
 
@@ -36,8 +37,6 @@
 [<img width='45' height="45" align='left' alt='TwitchAlerts' src="https://raw.githubusercontent.com/Meadowcottage/TwitchAlerts/master/build/icon.png">](https://twitchalerts.com/) Most of the support for this app must go to the TwitchAlerts team and the work they put in to make the platform itself and continue to make it great for streamers to use. To support [TwitchAlerts](https://twitchalerts.com/), who built the platform, feel free to check out their site for more details.
 
 [<img width='45' height="45" align='left' alt='Github' src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">](https://github.com/Meadowcottage/TwitchAlerts) Feel free to help support this unofficial app by submitting issues or bugs so we can resolve and fox them or even feel free to submit pull requests if you have already helped develop a fix for one of the bugs in the app.
-
-[<img width='45' height="45" align='left' alt='Paypal' src="https://upload.wikimedia.org/wikipedia/commons/5/53/PayPal_2014_logo.svg">](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=bendixon50%40gmail%2ecom&item_name=Tip%20for%20Meadowcottage&currency_code=GBP) If you wish to support me, the author of the app, directly. Feel free to use the paypal.me link to donate.
 
 ## LICENSE:
 
