@@ -1,238 +1,112 @@
 //Electron
 const electron = require('electron');
+const globalShortcut = electron.globalShortcut;
+const browserWindow = electron.BrowserWindow;
+const menu = electron.Menu;
 
 //App Info
 const app = electron.app;
-const app_name = 'TwitchAlerts';
-const app_title = 'Dashboard';
-const app_version = '1.0.1';
-const app_description = 'Web app for the TwitchAlerts dashboard.';
-const app_menu = electron.Menu;
+const app_name = app.getName();
+const app_title = app.getName();
+const app_version = app.getVersion();
+const app_description = 'Web app for the StreamLabs dashboard.';
+const app_config = require('./config');
+const app_is_dev = require('electron-is-dev');
 
-// App Window
-const BrowserWindow = electron.BrowserWindow;
+// System paths
+const path = require('path');
+const fs = require('fs');
 
-//General Menu Contents
-const menu_content = [{
-    label: 'Edit',
-    submenu: [{
-        label: 'Undo',
-        accelerator: 'CommandOrControl+Z',
-        role: 'undo'
-    }, {
-        label: 'Redo',
-        accelerator: 'Shift+CommandOrControl+Z',
-        role: 'redo'
-    }, {
-        type: 'separator'
-    }, {
-        label: 'Cut',
-        accelerator: 'CommandOrControl+X',
-        role: 'cut'
-    }, {
-        label: 'Copy',
-        accelerator: 'CommandOrControl+C',
-        role: 'copy'
-    }, {
-        label: 'Paste',
-        accelerator: 'CommandOrControl+V',
-        role: 'paste'
-    }, {
-        label: 'Select All',
-        accelerator: 'CommandOrControl+A',
-        role: 'selectall'
-    }]
-}, {
-    label: 'View',
-    submenu: [{
-        label: 'Toggle Fullscreen',
-        accelerator: 'CommandOrControl+F',
-        click: function() {
-            mainWindow.setFullScreen(!mainWindow.isFullScreen());
-        }
-    }, {
-        label: 'Reload',
-        accelerator: 'CommandOrControl+R',
-        click: function(item, focusedWindow) {
-            if (focusedWindow) focusedWindow.webContents.reload();
-        }
-    }]
-}, {
-    label: 'Window',
-    role: 'window',
-    submenu: [{
-        label: 'Minimize',
-        accelerator: 'CommandOrControl+M',
-        role: 'minimize'
-    }, {
-        label: 'Close',
-        accelerator: 'CommandOrControl+W',
-        role: 'close'
-    }]
-}, {
-    label: 'Help',
-    role: 'help',
-    submenu: [{
-        label: 'About TwitchAlerts',
-        click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/TwitchAlerts/releases/tag/" + app_version)
-        }
-    }, {
-        label: 'View TwitchAlerts',
-        click: function() {
-            require('electron').shell.openExternal("https://twitchalerts.com")
-        }
-    }, {
-        type: 'separator'
-    }, {
-        label: 'Changelog',
-        click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/TwitchAlerts/releases/tag/" + app_version)
-        }
-    }]
-}];
+//Electron DL
+require('electron-dl')();
 
-//Menu Contents for MacOS ONLY
-const darwin_menu_content = [{
-    label: 'Application',
-    submenu: [{
-        label: 'Hide ' + app_name,
-        accelerator: 'Command+H',
-        role: 'hide'
-    }, {
-        label: 'Hide Others',
-        accelerator: 'Command+Shift+H',
-        role: 'hideothers'
-    }, {
-        type: 'separator'
-    }, {
-        label: 'Quit',
-        accelerator: 'Command+Q',
-        click: function() {
-            app.quit();
-        }
-    }]
-}, {
-    label: 'Edit',
-    submenu: [{
-        label: 'Undo',
-        accelerator: 'CommandOrControl+Z',
-        role: 'undo'
-    }, {
-        label: 'Redo',
-        accelerator: 'Shift+CommandOrControl+Z',
-        role: 'redo'
-    }, {
-        type: 'separator'
-    }, {
-        label: 'Cut',
-        accelerator: 'CommandOrControl+X',
-        role: 'cut'
-    }, {
-        label: 'Copy',
-        accelerator: 'CommandOrControl+C',
-        role: 'copy'
-    }, {
-        label: 'Paste',
-        accelerator: 'CommandOrControl+V',
-        role: 'paste'
-    }, {
-        label: 'Select All',
-        accelerator: 'CommandOrControl+A',
-        role: 'selectall'
-    }]
-}, {
-    label: 'View',
-    submenu: [{
-        label: 'Toggle Fullscreen',
-        accelerator: 'CommandOrControl+F',
-        click: function() {
-            mainWindow.setFullScreen(!mainWindow.isFullScreen());
-        }
-    }, {
-        label: 'Reload',
-        accelerator: 'CommandOrControl+R',
-        click: function(item, focusedWindow) {
-            if (focusedWindow) focusedWindow.webContents.reload();
-        }
-    }]
-}, {
-    label: 'Window',
-    role: 'window',
-    submenu: [{
-        label: 'Minimize',
-        accelerator: 'CommandOrControl+M',
-        role: 'minimize'
-    }, {
-        label: 'Close',
-        accelerator: 'CommandOrControl+W',
-        role: 'close'
-    }]
-}, {
-    label: 'Help',
-    role: 'help',
-    submenu: [{
-        label: 'About TwitchAlerts',
-        click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/TwitchAlerts/releases/tag/" + app_version)
-        }
-    }, {
-        label: 'View TwitchAlerts',
-        click: function() {
-            require('electron').shell.openExternal("https://twitchalerts.com")
-        }
-    }, {
-        type: 'separator'
-    }, {
-        label: 'Changelog',
-        click: function() {
-            require('electron').shell.openExternal("https://github.com/Meadowcottage/TwitchAlerts/releases/tag/" + app_version)
-        }
-    }]
-}];
-
-// Main App Window
+// Main Application Window
 let mainWindow
 
-// Chooses titleBarStyle based on OS
-var app_titleBarStyle;
+// If the application is quitting
+let isQuitting = false;
 
-// Chooses menu to load based on OS
-var app_OS_menu;
+// Main Window
+function createMainWindow() {
+    const lastWindowState = app_config.get('lastWindowState');
+    const app_view = new electron.BrowserWindow({
+        title: app_title,
+        x: lastWindowState.x,
+        y: lastWindowState.y,
+        width: lastWindowState.width,
+        height: lastWindowState.height,
+        resizable: true,
+        movable: true,
+        fullscreenable: true,
+        autoHideMenuBar: true,
+        titleBarStyle: 'hidden-inset',
+        webPreferences: {
+            nodeIntegration: false,
+            plugins: true
+        }
+    });
+    app_view.loadURL('https://streamlabs.com/dashboard/');
 
-// If OS is Darwin(MacOS)
-if (process.platform == 'darwin') {
-    app_titleBarStyle = 'hidden-inset';
-    app_OS_menu = darwin_menu_content;
-} else {
-    app_titleBarStyle = 'default';
-    app_OS_menu = menu_content;
+    // When window is closed, hide window
+    app_view.on('close', e => {
+        if (!isQuitting) {
+            e.preventDefault();
+            if (process.platform === 'darwin') {
+                app.hide();
+            } else {
+                app.quit();
+            }
+        }
+
+    });
+    return app_view;
 }
 
-app.on('ready', function createWindow() {
-    mainWindow = new BrowserWindow({
-        title: app_title,
-        titleBarStyle: app_titleBarStyle,
-        movable: true,
-        width: 1280,
-        height: 720,
-        fullscreenable: true,
-        resizable: true,
-        autoHideMenuBar: false
+app.on('ready', () => {
+    mainWindow = createMainWindow();
+    menu.setApplicationMenu(require('./menu'))
+    if (app_is_dev) { mainWindow.openDevTools() }
+
+    const app_page = mainWindow.webContents;
+
+    app_page.on('dom-ready', () => {
+
+        // MacOS Top Offset
+        if (process.platform == 'darwin') { app_page.insertCSS('body > div { top: -42px!important; margin-top: 42px!important; }'); }
+
+        mainWindow.show();
+    });
+
+    //Open external links in browser
+    app_page.on('new-window', (e, url) => {
+        e.preventDefault();
+        electron.shell.openExternal(url);
+    });
+
+    //Shortcut to reload the page.
+    globalShortcut.register('CmdOrCtrl+R', () => {
+        mainWindow.webContents.reload();
     })
-    app_menu.setApplicationMenu(app_menu.buildFromTemplate(app_OS_menu))
-    mainWindow.loadURL('file://' + __dirname + '/index.html')
-    mainWindow.on('closed', function() {
-        mainWindow = null
+    globalShortcut.register('CmdOrCtrl+Left', () => {
+        mainWindow.webContents.goBack();
+        mainWindow.webContents.reload();
+    })
+
+    mainWindow.on('app-command', (e, cmd) => {
+        // Navigate the window back when the user hits their mouse back button
+        if (cmd === 'browser-backward' && mainWindow.webContents.canGoBack()) {
+            mainWindow.webContents.goBack()
+        }
     })
 })
-app.on('window-all-closed', function() {
+app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
         app.quit()
     }
 })
-app.on('activate', function() {
-    if (mainWindow === null) {
-        createWindow()
-    }
+app.on('activate', () => {
+    mainWindow.show()
 })
+app.on('before-quit', () => {
+	isQuitting = true;
+});

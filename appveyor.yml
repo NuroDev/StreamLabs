@@ -1,6 +1,8 @@
 platform:
   - x64
 
+os: unstable
+
 install:
   - ps: Install-Product node 6 x64
   - npm install
@@ -9,4 +11,4 @@ install:
 build: off
 
 test_script:
-  - npm run test
+  - npm test
