@@ -1,44 +1,39 @@
-<h1 align="center">
-  <a href="https://twitchalerts.com"><img alt='TwitchAlerts' width='256' height='256' src="https://raw.githubusercontent.com/Meadowcottage/TwitchAlerts/master/build/icon.png"></a>
-  <br>
-    TwitchAlerts (UNOFFICIAL)
-  <br>
-</h1>
+<img src="https://raw.githubusercontent.com/Meadowcottage/TwitchAlerts/master/build/icon.png" align="left" width="192px" height="192px"/>
+<img align="left" width="0" height="192px" hspace="10"/>
 
-<h4 align="center">This is the unofficial <a href="https://twitchalerts.com/">TwitchAlerts</a> web app. Built using the <a href="http://electron.atom.io/">Electron</a> framework to take the current live feed site and give it to you as a desktop app.</h4>
+# Twitch Alerts (UNOFFICIAL)
+> This is the unofficial [TwitchAlerts](https://twitchalerts.com/) web app. Built using the [Electron](http://electron.atom.io/) framework to take the current live feed site and give it to you as a desktop app.
 
-<p align="center">
-  <a href="https://travis-ci.org/Meadowcottage/TwitchAlerts"><img src="https://img.shields.io/travis/Meadowcottage/TwitchAlerts/master.svg?style=flat-square" alt="Travis"></a>
-  <a href="https://ci.appveyor.com/project/Meadowcottage/TwitchAlerts"><img src="https://img.shields.io/appveyor/ci/meadowcottage/TwitchAlerts.svg?style=flat-square" alt="Appveyor"></a>
-  <a href="https://github.com/Meadowcottage/TwitchAlerts/releases"><img src="https://img.shields.io/github/release/Meadowcottage/TwitchAlerts.svg?style=flat-square" alt="Release"></a>
-  <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=bendixon50%40gmail%2ecom&item_name=Tip%20for%20Meadowcottage&currency_code=GBP"><img src="https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square" alt="Paypal"></a>
-  <a href="https://github.com/Meadowcottage/TwitchAlerts/releases"><img src="https://img.shields.io/github/downloads/meadowcottage/TwitchAlerts/total.svg?style=flat-square" alt="Downloads"></a>
-</p>
+[![Travis](https://img.shields.io/travis/Meadowcottage/TwitchAlerts/master.svg?style=flat-square)](https://travis-ci.org/Meadowcottage/TwitchAlerts) [![Appveyor](https://img.shields.io/appveyor/ci/meadowcottage/TwitchAlerts.svg?style=flat-square)](https://ci.appveyor.com/project/Meadowcottage/TwitchAlerts) [![Release](https://img.shields.io/github/release/Meadowcottage/TwitchAlerts.svg?style=flat-square)](https://github.com/Meadowcottage/TwitchAlerts/releases) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg?style=flat-square)](https://www.paypal.com/cgi-bin/webscr?cmd=_xclick&business=bendixon50%40gmail%2ecom&item_name=Tip%20for%20Meadowcottage&currency_code=GBP) [![Downloads](https://img.shields.io/github/downloads/meadowcottage/TwitchAlerts/total.svg?style=flat-square)](https://github.com/Meadowcottage/TwitchAlerts/releases) [![License](https://img.shields.io/badge/License-GPL%20v3-blue.svg?style=flat-square)](http://www.gnu.org/licenses/)
 
-## Screenshots
+<br>
+<br>
 
-<img src="https://raw.githubusercontent.com/Meadowcottage/TwitchAlerts/master/build/Screenshot-1.png"/>
+# Screenshots
 
-<img src="https://raw.githubusercontent.com/Meadowcottage/TwitchAlerts/master/build/Screenshot-2.png"/>
+[<img alt='TwitchAlerts' src="https://raw.githubusercontent.com/Meadowcottage/TwitchAlerts/master/build/Screenshot-1.png">](https://github.com/Meadowcottage/TwitchAlerts/releases)
 
-## Install
+[<img alt='TwitchAlerts' src="https://raw.githubusercontent.com/Meadowcottage/TwitchAlerts/master/build/Screenshot-2.png">](https://github.com/Meadowcottage/TwitchAlerts/releases)
 
-[Download the lastest version](https://github.com/Meadowcottage/TwitchAlerts/releases).
+## Downloads
+> Downloads can be found on the [releases page](https://github.com/Meadowcottage/TwitchAlerts/releases)
 
 ## Development
 
-- Clone: `$ git clone https://github.com/Meadowcottage/TwitchAlerts.git`
-- Install NPM: `$ npm install`
-- Start Preview: `$ npm start`
-- Build: `$ npm run dist`
+```
+$ git clone https://github.com/Meadowcottage/TwitchAlerts.git
+$ npm install
+$ npm start
+$ npm run dist
+```
 
 ## SUPPORT
 
 [<img width='45' height="45" align='left' alt='TwitchAlerts' src="https://raw.githubusercontent.com/Meadowcottage/TwitchAlerts/master/build/icon.png">](https://twitchalerts.com/) Most of the support for this app must go to the TwitchAlerts team and the work they put in to make the platform itself and continue to make it great for streamers to use. To support [TwitchAlerts](https://twitchalerts.com/), who built the platform, feel free to check out their site for more details.
 
-[<img width='45' height="45" align='left' alt='Github' src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">](https://github.com/Meadowcottage/TwitchAlerts) Feel free to help support this unofficial app by submitting issues or bugs so we can resolve and fox them or even feel free to submit pull requests if you have already helped develop a fix for one of the bugs in the app.
+[<img width='45' height="45" align='left' alt='Github' src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">](https://github.com/Meadowcottage/TwitchAlerts) Feel free to help support this unofficial app by submitting issues or bugs so we can resolve and fix them or even feel free to submit pull requests if you have already helped develop a fix for one of the bugs in the app.
 
-## LICENSE:
+## License
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
