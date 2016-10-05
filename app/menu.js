@@ -102,6 +102,11 @@ var template_win = [{
             require('electron').shell.openExternal("https://github.com/Meadowcottage/StreamLabs/releases/tag/" + app_version)
         }
     }, {
+        label: 'Version ' + app_version,
+        enabled: false
+    }, {
+        type: 'separator'
+    }, {
         label: 'View StreamLabs',
         click: function() {
             require('electron').shell.openExternal("https://www.streamlabs.com/")
@@ -221,6 +226,11 @@ var template_osx = [{
         click: function() {
             require('electron').shell.openExternal("https://github.com/Meadowcottage/StreamLabs/releases/tag/" + app_version)
         }
+    }, {
+        label: 'Version ' + app_version,
+        enabled: false
+    }, {
+        type: 'separator'
     }, {
         label: 'View StreamLabs',
         click: function() {
