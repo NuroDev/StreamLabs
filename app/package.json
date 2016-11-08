@@ -1,27 +1,31 @@
 {
-  "name": "StreamLabs",
-  "productName": "Stream Labs",
-  "version": "1.0.2",
-  "description": "Web app for the StreamLabs dashboard.",
-  "private": true,
-  "main": "main.js",
-  "author": "[MEADOW_DEV] <bendixon50@gmail.com> (http://twitter.com/Meadowcottage13)",
-  "license": "GNU General Public License",
-  "homepage": "https://github.com/meadowcottage/StreamLabs/",
-  "keywords": [
-    "Electron",
-    "Stream Labs"
-  ],
-  "bugs": {
-    "url": "https://github.com/meadowcottage/StreamLabs/issues/"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/meadowcottage/StreamLabs.git"
-  },
-  "dependencies": {
-    "electron-config": "^0.2.1",
-    "electron-dl": "^1.3.0",
-    "electron-is-dev": "^0.1.2"
-  }
+    "name": "StreamLabs",
+    "productName": "StreamLabs",
+    "version": "1.0.3",
+    "description": "The unofficial electron app for StreamLabs",
+    "private": true,
+    "main": "main.js",
+    "author": {
+        "name": "Meadowcottage"
+    },
+    "license": "GNU General Public License",
+    "homepage": "https://github.com/Meadowcottage/StreamLabs/",
+    "keywords": [
+        "electron",
+        "StreamLabs",
+        "social"
+    ],
+    "bugs": {
+        "url": "https://github.com/Meadowcottage/StreamLabs/issues/"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/Meadowcottage/StreamLabs.git"
+    },
+    "dependencies": {
+        "electron-config": "^0.2.1",
+        "electron-context-menu": "^0.6.0",
+        "electron-dl": "^1.5.0",
+        "electron-is-dev": "^0.1.2"
+    }
 }

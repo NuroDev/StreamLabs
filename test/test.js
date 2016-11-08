@@ -26,7 +26,7 @@ describe('App Testing:', function() {
             return app.client.getTitle()
         }).then(function(title) {
             // Verify the window's title
-            assert.equal(title, 'Streamlabs')
+            assert.equal(title, "StreamLabs" )
         }).then(function() {
             // Stop the application
             return app.stop()
