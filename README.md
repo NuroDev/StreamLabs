@@ -1,7 +1,7 @@
 <div align="center">
 
 <a href="https://github.com/meadowcottage/streamlabs/releases">
-<img alt="Streamlabs" src="https://github.com/meadowcottage/streamlabs/blob/master/build/icons/streamlabs-icon.png?raw=true" width="128px" />
+<img alt="Streamlabs" src="https://github.com/meadowcottage/streamlabs/blob/master/build/streamlabs-icon.png?raw=true" width="128px" />
 </a>
 
 <h1> Streamlabs </h1>
