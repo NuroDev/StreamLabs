@@ -1,57 +1,69 @@
 {
-    "private": true,
+    "name": "streamlabs",
+    "productName": "Streamlabs",
+    "version": "1.0.2",
+    "description": "Desktop client for Streamlabs Dashboard",
+    "main": "src/index.js",
     "scripts": {
-        "postinstall": "install-app-deps",
-        "start": "npm install && npm run compile && electron ./app",
-        "test": "mocha",
-        "compile": "rimraf app/out",
-        "pack": "npm run compile && build --dir",
-        "dist": "npm run compile && build"
+        "start": "electron-forge start",
+        "package": "electron-forge package",
+        "make": "electron-forge make",
+        "lint": "standard"
     },
-    "build": {
-        "appId": "com.Meadowcottage.StreamLabs",
-        "category": "public.app-category.social",
-        "productName": "StreamLabs",
-        "dmg": {
-            "contents": [
-                {
-                    "x": 410,
-                    "y": 150,
-                    "type": "link",
-                    "path": "/Applications"
-                },
-                {
-                    "x": 130,
-                    "y": 150,
-                    "type": "file"
-                }
-            ]
-        },
-        "win": {
-            "target": [
-                "squirrel",
-                "zip"
-            ],
-            "remoteReleases": "https://github.com/Meadowcottage/StreamLabs",
-            "loadingGif": "build/install-spinner.gif",
-            "msi": true
+    "author": "Meadowcottage",
+    "license": "GPL-3.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/meadowcottage/streamlabs.git"
+    },
+    "config": {
+        "forge": {
+            "make_targets": {
+                "win32": [
+                    "squirrel"
+                ],
+                "darwin": [
+                    "dmg",
+                    "zip"
+                ]
+            },
+            "electronPackagerConfig": {
+                "packageManager": "yarn",
+                "asar": true,
+                "icon": "./build/streamlabs-icon.png"
+            },
+            "electronWinstallerConfig": {
+                "name": "Streamlabs",
+                "setupIcon": "./build/streamlabs-icon.ico"
+            },
+            "electronInstallerDMG": {
+                "background": "./build/background.png",
+                "icon": "./build/streamlabs-icon.icns",
+                "overwrite": true
+            },
+            "github_repository": {
+                "owner": "meadowcottage",
+                "name": "streamlabs"
+            }
         }
     },
+    "dependencies": {
+        "electron-compile": "^6.4.1",
+        "electron-is-dev": "^0.3.0",
+        "electron-log": "^2.2.7"
+    },
     "devDependencies": {
-        "electron": "^1.4.5",
-        "electron-builder": "^7.23.2",
-        "mocha": "^3.1.2",
-        "rimraf": "^2.5.4",
-        "spectron": "^3.4.0"
+        "electron-forge": "^3.2.0",
+        "electron-prebuilt-compile": "1.7.5",
+        "standard": "^10.0.3"
     },
     "packageIgnore": [
-        "LICENSE.md",
+        "LICENSE",
         "README.md",
         ".DS_Store",
         ".travis.yml",
-        "appveyor.yml",
-        "test",
-        "dist",
-        "build/Screenshot.png"
+        "out",
+        "build/Screenshot.png",
+        "build/Screenshot-mac.png"
     ]
 }
