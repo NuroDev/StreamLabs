@@ -1,25 +1,38 @@
-<img src="https://raw.githubusercontent.com/Meadowcottage/StreamLabs/master/build/streamlabs-icon.png" align="left" width="192px" height="192px"/>
-<img align="left" width="0" height="192px" hspace="10"/>
+<div align="center">
 
-# StreamLabs
-> Desktop client for Streamlabs Dashboard
+<a href="https://github.com/meadowcottage/streamlabs/releases">
+<img alt="Streamlabs" src="https://github.com/meadowcottage/streamlabs/blob/master/build/icons/streamlabs-icon.png?raw=true" width="128px" />
+</a>
 
-[![Travis](https://img.shields.io/travis/Meadowcottage/StreamLabs/master.svg?style=flat-square)](https://travis-ci.org/Meadowcottage/StreamLabs) [![Appveyor](https://img.shields.io/appveyor/ci/Meadowcottage/StreamLabs.svg?style=flat-square)](https://ci.appveyor.com/project/Meadowcottage/StreamLabs) [![Release](https://img.shields.io/github/release/Meadowcottage/StreamLabs.svg?style=flat-square)](https://github.com/Meadowcottage/StreamLabs/releases) [![Downloads](https://img.shields.io/github/downloads/Meadowcottage/StreamLabs/total.svg?style=flat-square)](https://github.com/Meadowcottage/StreamLabs/releases)
+<h1> Streamlabs </h1>
+<p> Desktop client for Streamlabs Dashboard (Unofficial) </p>
+
+[![License](https://img.shields.io/aur/license/yaourt.svg?style=flat-square&colorB=f44336)](https://github.com/meadowcottage/streamlabs/blob/master/LICENSE) [![standardjs](https://img.shields.io/badge/code_style-standard-brightgreen.svg?style=flat-square)](https://standardjs.com) [![gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg?style=flat-square)](https://gitmoji.carloscuesta.me/) [![Travis](https://img.shields.io/travis/meadowcottage/streamlabs/master.svg?style=flat-square)](https://travis-ci.org/meadowcottage/streamlabs) [![Downloads](https://img.shields.io/github/downloads/meadowcottage/streamlabs/total.svg?style=flat-square)](https://github.com/meadowcottage/streamlabs/releases)
+
+<img alt="Streamlabs" src="https://github.com/meadowcottage/streamlabs/blob/master/build/screenshot.png?raw=true" />
+
+</div>
+
+## Installation:
+All builds and downloads are available [here](https://github.com/meadowcottage/streamlabs/releases) in the repo releases section.
 
 ## Development
 
+Installation:
 ```
-$ git clone https://github.com/Meadowcottage/StreamLabs.git
-$ cd StreamLabs
-$ npm install
+$ git clone https://github.com/meadowcottage/streamlabs.git
+$ cd streamlabs
+```
+
+Running:
+```
 $ npm start
 ```
 
-## SUPPORT
-
-[<img width='45' height="45" align='left' alt='StreamLabs' src="https://raw.githubusercontent.com/Meadowcottage/StreamLabs/master/build/streamlabs-icon.png">](https://streamlabs.com/dashboard) Most of the support for this app must go to the original site team and the work they put in to make the platform itself. To support [StreamLabs](https://streamlabs.com/dashboard), who built the platform, feel free to check out their site for more details.
-
-[<img width='45' height="45" align='left' alt='Github' src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg">](https://github.com/Meadowcottage/StreamLabs) Feel free to help support this unofficial app by submitting issues or bugs so we can resolve and fix them or even feel free to submit pull requests if you have already helped develop a fix for one of the bugs in the app.
+Packaging:
+```
+$ npm run package
+```
 
 ## License
 
