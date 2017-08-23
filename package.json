@@ -34,7 +34,8 @@
             },
             "electronWinstallerConfig": {
                 "name": "Streamlabs",
-                "setupIcon": "./build/streamlabs-icon.ico"
+                "setupIcon": "./build/streamlabs-icon.ico",
+                "loadingGif": "./build/install-spinner.gif"
             },
             "electronInstallerDMG": {
                 "background": "./build/background.png",
