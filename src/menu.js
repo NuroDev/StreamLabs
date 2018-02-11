@@ -128,7 +128,7 @@ const menuTemplate = [
     submenu: [{
       label: 'About ' + appTitle,
       click () {
-        electron.shell.openExternal('https://github.com/Meadowcottage/streamlabs/releases/tag/' + appVersion)
+        electron.shell.openExternal('https://github.com/NuroDev/streamlabs/releases/tag/' + appVersion)
       }
     }, {
       label: 'Version ' + appVersion,
@@ -145,7 +145,7 @@ const menuTemplate = [
     }, {
       label: 'Changelog',
       click () {
-        electron.shell.openExternal('https://github.com/Meadowcottage/streamlabs/releases/tag/' + appVersion)
+        electron.shell.openExternal('https://github.com/NuroDev/streamlabs/releases/tag/' + appVersion)
       }
     }]
   }]
