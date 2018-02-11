@@ -17,36 +17,7 @@
         "url": "https://github.com/meadowcottage/streamlabs.git"
     },
     "config": {
-        "forge": {
-            "make_targets": {
-                "win32": [
-                    "squirrel"
-                ],
-                "darwin": [
-                    "dmg",
-                    "zip"
-                ]
-            },
-            "electronPackagerConfig": {
-                "packageManager": "yarn",
-                "asar": true,
-                "icon": "./build/streamlabs-icon.png"
-            },
-            "electronWinstallerConfig": {
-                "name": "Streamlabs",
-                "setupIcon": "./build/streamlabs-icon.ico",
-                "loadingGif": "./build/install-spinner.gif"
-            },
-            "electronInstallerDMG": {
-                "background": "./build/background.png",
-                "icon": "./build/streamlabs-icon.icns",
-                "overwrite": true
-            },
-            "github_repository": {
-                "owner": "meadowcottage",
-                "name": "streamlabs"
-            }
-        }
+        "forge": "./forge.config.js"
     },
     "dependencies": {
         "electron-compile": "^6.4.1",
