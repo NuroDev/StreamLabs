@@ -8,7 +8,8 @@
         "start": "electron-forge start",
         "package": "electron-forge package",
         "make": "electron-forge make",
-        "lint": "standard"
+        "lint": "standard",
+        "linx-fix": "standard --fix"
     },
     "author": "NURO",
     "license": "GPL-3.0",
