@@ -10,11 +10,11 @@
         "make": "electron-forge make",
         "lint": "standard"
     },
-    "author": "Meadowcottage",
+    "author": "NURO",
     "license": "GPL-3.0",
     "repository": {
         "type": "git",
-        "url": "https://github.com/meadowcottage/streamlabs.git"
+        "url": "https://github.com/nurodev/streamlabs.git"
     },
     "config": {
         "forge": "./forge.config.js"
