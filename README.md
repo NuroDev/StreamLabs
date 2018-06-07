@@ -10,9 +10,6 @@
 [![License](https://img.shields.io/badge/license-mit-blue.svg?longCache=true&style=for-the-badge)](http://www.gnu.org/licenses/) [![StandardJS](https://img.shields.io/badge/code--style-standard-f4df48.svg?longCache=true&style=for-the-badge)](https://standardjs.com/) [![gitmoji](https://img.shields.io/badge/gitmoji-%20%F0%9F%98%9C%20%F0%9F%98%8D-FFDD67.svg?longCache=true&style=for-the-badge)](https://gitmoji.carloscuesta.me/) [![Downloads](https://img.shields.io/github/downloads/meadowcottage/streamlabs/total.svg?longCache=true&style=for-the-badge)](https://github.com/meadowcottage/streamlabs/releases)
 
 <br />
-<br />
-
-<img alt='Streamlabs' src="https://github.com/nurodev/streamlabs/blob/master/build/screenshot.png?raw=true" />
 
 </div>
 
