@@ -2586,7 +2586,7 @@ electron-packager@^11.0.0:
     semver "^5.3.0"
     yargs-parser "^9.0.2"
 
-electron-prebuilt-compile@^8.2.0:
+electron-prebuilt-compile@8.2.0:
   version "8.2.0"
   resolved "https://registry.yarnpkg.com/electron-prebuilt-compile/-/electron-prebuilt-compile-8.2.0.tgz#85c5ffb2f549f53daf4f470dd1ef7d1822a561f3"
   integrity sha512-vWFyfkl+CRg0+1AYo1Lvg0y8LfOkTouFQkPn8PHJWP4ZYPBM2NiDf6T/ku58w8WaRSKo+IcDzHKYPnb1hvZuaQ==
@@ -3770,9 +3770,9 @@ graphql@^0.9.3:
     iterall "^1.0.0"
 
 handlebars@^4.0.1:
-  version "4.7.6"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.6.tgz#d4c05c1baf90e9945f77aa68a7a219aa4a7df74e"
-  integrity sha512-1f2BACcBfiwAfStCKZNrUCgqNZkGsAT7UM3kkYtXuLo0KnaVfjKOyf7PRzB6++aK9STyT1Pd2ZCPe3EGOXleXA==
+  version "4.7.7"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.7.tgz#9ce33416aad02dbd6c8fafa8240d5d98004945a1"
+  integrity sha512-aAcXm5OAfE/8IXkcZvCepKU3VzW1/39Fb5ZuqMtgI/hT8X2YgoMvBY5dLhq/cpOvw7Lk1nK/UF71aLG/ZnVYRA==
   dependencies:
     minimist "^1.2.5"
     neo-async "^2.6.0"
@@ -7389,9 +7389,9 @@ uglify-js@^2.4.19:
     uglify-to-browserify "~1.0.0"
 
 uglify-js@^3.1.4:
-  version "3.10.4"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.10.4.tgz#dd680f5687bc0d7a93b14a3482d16db6eba2bfbb"
-  integrity sha512-kBFT3U4Dcj4/pJ52vfjCSfyLyvG9VYYuGYPmrPvAxRw/i7xHiT4VvCev+uiEMcEEiu6UNB6KgWmGtSUYIWScbw==
+  version "3.13.5"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.13.5.tgz#5d71d6dbba64cf441f32929b1efce7365bb4f113"
+  integrity sha512-xtB8yEqIkn7zmOyS2zUNBsYCBRhDkvlNxMMY2smuJ/qA8NCHeQvKCF3i9Z4k8FJH4+PJvZRtMrPynfZ75+CSZw==
 
 uglify-js@~2.2.5:
   version "2.2.5"
